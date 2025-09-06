@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bhavarth Karmarkar — Hacker Portfolio</title>
+    <meta name="description" content="Bhavarth Karmarkar — cybersecurity, research, CTFs & tools." />
+    <meta name="theme-color" content="#071018" />
+    <!-- Tailwind CDN (quick prototyping) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --panel: #071018;
+            --accent: #00ff8c;
+            --muted: #94a3b8;
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            background: var(--bg);
+            color: #e6eef6;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .mono {
+            font-family: inherit
+        }
+
+        .glow {
+            text-shadow: 0 0 8px rgba(0, 255, 140, 0.12), 0 0 24px rgba(0, 255, 140, 0.04)
+        }
+
+        #matrix {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.06;
+            pointer-events: none
+        }
+
+        .card-img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            background: #0b1114
+        }
+
+        /* layout niceties */
+        .section-heading {
+            color: var(--accent);
+            font-weight: 600
+        }
+
+        a.ghost {
+            border: 1px solid rgba(148, 163, 184, 0.12);
+            padding: .4rem .75rem;
+            border-radius: .375rem;
+            display: inline-block
+        }
+
+        /* grids adapt to missing sections automatically */
+        .grid-responsive {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem
+        }
+
+        /* small accessible focus */
+        a:focus {
+            outline: 2px dashed rgba(0, 255, 140, 0.18);
+            outline-offset: 3px
+        }
+
+        /* print-ready resume link */
+        @media print {
+            .no-print {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Matrix canvas -->
+    <canvas id="matrix" aria-hidden="true"></canvas>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <header class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-4">
+                <div class="mono text-green-400 text-lg glow">╔═[ Bhavarth ]═╗</div>
+                <div class="text-slate-400">cybersecurity • research • CTFs</div>
+            </div>
+            <nav class="flex gap-3 items-center text-sm" aria-label="Primary">
+                <a href="#intro" class="hover:underline">Intro</a>
+                <a href="#projects" class="hover:underline">Projects</a>
+                <a href="#blogs" class="hover:underline">Blogs</a>
+                <a href="#publications" class="hover:underline">Publications</a>
+                <a href="#conferences" class="hover:underline">Conferences</a>
+                <a href="/assets/resume.pdf" download
+                    class="px-3 py-1 border rounded border-slate-700 text-slate-300 hover:bg-slate-800 no-print">Resume</a>
+            </nav>
+        </header>
+
+        <!-- Intro -->
+        <section id="intro" class="mb-10">
+            <div class="grid md:grid-cols-2 gap-6 items-start">
+                <div class="bg-[var(--panel)] border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <pre class="mono text-sm text-green-200 whitespace-pre-wrap leading-6">
+<span class="text-green-400">> whoami</span>
+Bhavarth Karmarkar
+<span class="text-green-400">> role</span>
+Security Researcher / DevSecOps Engineer
+<span class="text-green-400">> location</span>
+India — Open to remote / contract
+<span class="text-green-400">> specialties</span>
+Binary exploitation · Recon automation · Bug bounty · Tooling
+          </pre>
+
+                    <div class="mt-4 flex gap-3">
+                        <a href="#blogs"
+                            class="mono px-3 py-1 rounded bg-[rgba(0,255,140,0.06)] border border-[rgba(0,255,140,0.2)] text-[var(--accent)]">Read
+                            writeups</a>
+                        <a href="#projects" class="mono px-3 py-1 rounded border border-slate-700">See projects</a>
+                        <a href="/assets/resume.pdf" download
+                            class="mono px-3 py-1 rounded border border-slate-700">Download Resume</a>
+                    </div>
+                </div>
+
+                <div
+                    class="p-6 rounded-2xl border border-slate-800 bg-gradient-to-br from-[rgba(7,16,24,0.35)] to-transparent">
+                    <h1 class="text-3xl font-semibold mono">Hacker-coded portfolio</h1>
+                    <p class="mt-4 text-slate-400">Minimal, dark-first portfolio for writeups, tools and talks. Quick to
+                        update — structure is deliberately flat and modular.</p>
+
+                    <dl class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-300">
+                        <div>
+                            <dt class="text-slate-400">Experience</dt>
+                            <dd>3+ years offensive sec & tooling</dd>
+                        </div>
+                        <div>
+                            <dt class="text-slate-400">CTFs</dt>
+                            <dd>Writeups & walkthroughs</dd>
+                        </div>
+                        <div>
+                            <dt class="text-slate-400">Languages</dt>
+                            <dd>Go · Python · Bash</dd>
+                        </div>
+                        <div>
+                            <dt class="text-slate-400">Contact</dt>
+                            <dd><a href="mailto:bhavarth@example.com" class="underline">bhavarth@example.com</a></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current company & role -->
+        <section id="current" class="mb-10">
+            <h2 class="section-heading mono text-xl">Current Company & Role</h2>
+            <div class="mt-4 bg-[var(--panel)] border border-slate-800 rounded p-4">
+                <div class="flex items-center justify-between gap-4">
+                    <div>
+                        <div class="mono text-green-200">Senior DevSecOps Engineer</div>
+                        <div class="text-sm text-slate-400">Acme Security Labs — 2023 → Present</div>
+                        <p class="mt-3 text-slate-300 text-sm">Working on automated security pipelines, vulnerability
+                            triage, and internal tooling for faster bug discovery and remediation.</p>
+                    </div>
+                    <div class="text-right text-sm text-slate-400">
+                        <div>Location: Remote</div>
+                        <div>Open to: Contract / Advisory</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="mb-10">
+            <h2 class="section-heading mono text-xl">Skills</h2>
+            <div class="mt-4 grid gap-3">
+                <div class="flex flex-wrap gap-2">
+                    <span class="ghost mono text-sm">Binary Exploitation</span>
+                    <span class="ghost mono text-sm">Recon Automation</span>
+                    <span class="ghost mono text-sm">Bug Bounty</span>
+                    <span class="ghost mono text-sm">Nuclei</span>
+                    <span class="ghost mono text-sm">Go</span>
+                    <span class="ghost mono text-sm">Python</span>
+                    <span class="ghost mono text-sm">Burp Suite</span>
+                </div>
+                <div class="mt-2 text-slate-400 text-sm">Pro tip: keep this list short and update as you add new
+                    projects or talks.</div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mb-10">
+            <h2 class="section-heading mono text-xl">Projects</h2>
+            <div class="mt-4 grid-responsive">
+                <!-- Project card (duplicate for each project) -->
+                <article class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <img class="card-img mb-3" src="/assets/resonance-wave12.jpg" alt="Project Resonance snapshot"
+                        loading="lazy">
+                    <h3 class="mono text-lg">Project Resonance — Open Port Chronicle (Wave 12)</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Observability & insights about internet services on common
+                        ports.</p>
+                    <div class="mt-3 flex gap-2">
+                        <a href="/projects/resonance.html" class="ghost mono text-sm">Details</a>
+                        <a href="/assets/resonance-report.pdf" class="ghost mono text-sm">Report</a>
+                    </div>
+                </article>
+
+                <article class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <img class="card-img mb-3" src="/assets/jigsaw.jpg" alt="July Jigsaw CTF screenshot" loading="lazy">
+                    <h3 class="mono text-lg">July Jigsaw — CTF</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Full walkthrough and writeup.</p>
+                    <div class="mt-3 flex gap-2">
+                        <a href="/projects/jigsaw.html" class="ghost mono text-sm">Walkthrough</a>
+                    </div>
+                </article>
+
+                <!-- add more project cards here -->
+            </div>
+        </section>
+
+        <!-- Blogs -->
+        <section id="blogs" class="mb-10">
+            <h2 class="section-heading mono text-xl">Blogs & Writeups</h2>
+            <p class="text-slate-400 text-sm mt-2">Short summaries — full posts are in <code>/blog/</code> (static HTML
+                or markdown builds).</p>
+
+            <ul class="mt-4 grid-responsive">
+                <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <a href="./blog/2025-09-01-intro-binary-exploitation.html" class="mono text-green-200">Introduction
+                        to Binary Exploitation — Exploiting buffer overflows</a>
+                    <p class="text-slate-400 text-sm mt-2">A practical walkthrough on stack overflows and crafting
+                        exploits.</p>
+                </li>
+
+                <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <a href="./blog/2025-09-02-automating-bugbounties-nuclei.html"
+                        class="mono text-green-200">Automating Bug Bounties with Nuclei</a>
+                    <p class="text-slate-400 text-sm mt-2">Custom templates, fast scanning, and pipeline tips.</p>
+                </li>
+
+                <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <a href="./blog/2025-09-03-july-jigsaw-ctf.html" class="mono text-green-200">July Jigsaw — CTF
+                        Walkthrough</a>
+                    <p class="text-slate-400 text-sm mt-2">Challenge-by-challenge solutions and lessons learned.</p>
+                </li>
+
+                <!-- Template to add more blog cards -->
+                <!--
+        <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+          <a href="./blog/YYYY-MM-DD-slug.html" class="mono text-green-200">Post title</a>
+          <p class="text-slate-400 text-sm mt-2">Short summary.</p>
+        </li>
+        -->
+            </ul>
+        </section>
+
+        <!-- Writeups (separate if you want a different layout) -->
+        <section id="writeups" class="mb-10">
+            <h2 class="section-heading mono text-xl">Writeups & PoCs</h2>
+            <div class="mt-4 bg-[var(--panel)] border border-slate-800 rounded p-4 text-slate-300 text-sm">
+                <p>Place short PoC summaries here and link to safe downloadable content in <code>/assets/pocs</code>.
+                    Keep exploit code behind a toggle or gated repo if it contains sensitive details.</p>
+            </div>
+        </section>
+
+        <!-- Talks (OPTIONAL) - this block is currently COMMENTED OUT.
+         To enable talks: remove the surrounding <!--  ... --> lines.
+        Example: Uncomment the whole <section id="talks"> ... </section> block below.
+        -->
+        <!--
+    <section id="talks" class="mb-10">
+      <h2 class="section-heading mono text-xl">Talks</h2>
+      <p class="text-slate-400 text-sm mt-2">Talks and slides (link to slides or video).</p>
+
+      <div class="mt-4 grid-responsive">
+        <article class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+          <img class="card-img mb-3" src="/assets/talk-1.jpg" alt="Talk screenshot" loading="lazy">
+          <h3 class="mono text-lg">Talk Title — Conference</h3>
+          <p class="text-slate-400 mt-2 text-sm">Brief description and links to slides / video.</p>
+          <div class="mt-3 flex gap-2">
+            <a href="/slides/talk-1-slides.pdf" class="ghost mono text-sm">Slides</a>
+            <a href="https://youtu.be/..." class="ghost mono text-sm">Video</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    -->
+
+        <!-- Publications -->
+        <section id="publications" class="mb-10">
+            <h2 class="section-heading mono text-xl">Publications</h2>
+            <div class="mt-4 grid-responsive">
+                <article class="bg-[var(--panel)] border border-slate-800 rounded p-4 text-sm">
+                    <h3 class="mono text-lg">Paper / Blog Title</h3>
+                    <p class="text-slate-400 mt-2">Short blurb. <a href="/assets/paper.pdf" class="underline">Read
+                            PDF</a></p>
+                </article>
+                <!-- add more -->
+            </div>
+        </section>
+
+        <!-- Conferences (images) -->
+        <section id="conferences" class="mb-12">
+            <h2 class="section-heading mono text-xl">Conferences & Photos</h2>
+            <p class="text-slate-400 text-sm mt-2">Snapshots from events. Images live in
+                <code>/assets/conferences/</code>.
+            </p>
+
+            <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <figure class="bg-[var(--panel)] rounded overflow-hidden border border-slate-800">
+                    <img src="/assets/conferences/conf-1.jpg" alt="Conference 1" class="card-img" loading="lazy">
+                    <figcaption class="p-2 text-xs text-slate-400">Conference — 2024</figcaption>
+                </figure>
+                <figure class="bg-[var(--panel)] rounded overflow-hidden border border-slate-800">
+                    <img src="/assets/conferences/conf-2.jpg" alt="Conference 2" class="card-img" loading="lazy">
+                    <figcaption class="p-2 text-xs text-slate-400">Meetup — 2023</figcaption>
+                </figure>
+                <!-- add more images as available -->
+            </div>
+        </section>
+
+        <footer class="mt-8 text-slate-500 text-sm mono">
+            © <span id="y"></span> Bhavarth Karmarkar — <a href="https://github.com/your-github-username"
+                class="underline">github</a> • <a href="https://linkedin.com/in/yourprofile"
+                class="underline">linkedin</a>
+        </footer>
+    </main>
+
+    <script>
+        // year
+        document.getElementById('y').innerText = new Date().getFullYear();
+
+        // Matrix background: responsive + devicePixelRatio friendly
+        (function () {
+            const canvas = document.getElementById('matrix');
+            const ctx = canvas.getContext('2d');
+            const chars = "01█▓▒░<>/{}[]()abcdefghijklmnopqrstuvwxyz";
+            let drops = [];
+            function resize() {
+                const dpr = Math.max(1, window.devicePixelRatio || 1);
+                canvas.width = Math.floor(window.innerWidth * dpr);
+                canvas.height = Math.floor(window.innerHeight * dpr);
+                canvas.style.width = window.innerWidth + 'px';
+                canvas.style.height = window.innerHeight + 'px';
+                ctx.scale(dpr, dpr);
+                const cols = Math.floor(window.innerWidth / 14);
+                drops = Array(cols).fill(1);
+            }
+            function draw() {
+                ctx.fillStyle = "rgba(6,10,15,0.08)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = "rgba(0,255,140,0.08)";
+                ctx.font = "12px monospace";
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                    ctx.fillText(text, i * 14, drops[i] * 14);
+                    if (drops[i] * 14 > window.innerHeight && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+                requestAnimationFrame(draw);
+            }
+            window.addEventListener('resize', () => { resize(); });
+            resize();
+            draw();
+        })();
+    </script>
+
+    <!--
+    Quick notes & templates:
+
+    1) To COMMENT OUT a whole section (e.g., Talks) wrap the whole <section id="talks"> ... </section> with an HTML comment:
+       <!--
+         <section id="talks"> ... </section>
+       -->
+
+    This will remove it from the page entirely. Uncomment to restore.
+
+    2) Add a new blog card:
+    <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+        <a href="./blog/2025-09-07-new-post.html" class="mono text-green-200">Post title</a>
+        <p class="text-slate-400 text-sm mt-2">Short summary.</p>
+    </li>
+
+    3) Where to store assets:
+    /assets/resume.pdf
+    /assets/resonance-wave12.jpg
+    /assets/conferences/conf-1.jpg
+    /assets/paper.pdf
+
+    4) If you later move to a generator (Jekyll / Next.js), keep this visual structure; each section maps to a
+    partial/component.
+
+    5) Accessibility: replace alt texts and the mailto link with your real email.
+
+    -->
+</body>
+
+</html>
