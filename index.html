@@ -127,10 +127,6 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
           </pre>
 
                     <div class="mt-4 flex gap-3">
-                        <a href="#blogs"
-                            class="mono px-3 py-1 rounded bg-[rgba(0,255,140,0.06)] border border-[rgba(0,255,140,0.2)] text-[var(--accent)]">Read
-                            writeups</a>
-                        <a href="#projects" class="mono px-3 py-1 rounded border border-slate-700">See projects</a>
                         <a href="/assets/resume.pdf" download
                             class="mono px-3 py-1 rounded border border-slate-700">Download Resume</a>
                     </div>
@@ -138,9 +134,10 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
 
                 <div
                     class="p-6 rounded-2xl border border-slate-800 bg-gradient-to-br from-[rgba(7,16,24,0.35)] to-transparent">
-                    <h1 class="text-3xl font-semibold mono">Hacker-coded portfolio</h1>
-                    <p class="mt-4 text-slate-400">Minimal, dark-first portfolio for writeups, tools and talks. Quick to
-                        update — structure is deliberately flat and modular.</p>
+                    <h1 class="text-3xl font-semibold mono">Security Engineer/Researcher</h1>
+                    <br class="mt-4 text-slate-400">Hello World, <br> I am Bhavarth - a cybersecurity researcher, builder, and CTF enthusiast. My portfolio showcases a mix
+                    of research, hands-on projects, and learning initiatives that reflect my approach: curious, methodical, and
+                    impact-driven.</p>
 
                     <dl class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-300">
                         <div>
@@ -171,13 +168,12 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
                 <div class="flex items-center justify-between gap-4">
                     <div>
                         <div class="mono text-green-200">Senior DevSecOps Engineer</div>
-                        <div class="text-sm text-slate-400">Acme Security Labs — 2023 → Present</div>
-                        <p class="mt-3 text-slate-300 text-sm">Working on automated security pipelines, vulnerability
-                            triage, and internal tooling for faster bug discovery and remediation.</p>
+                        <div class="text-sm text-slate-400">RedHunt Labs — 2024 → Present</div>
+                        <p class="mt-3 text-slate-300 text-sm">Working on automated Security Tooling for ASM product and simultaneously contributiong to cutting-edge research.</p>
                     </div>
                     <div class="text-right text-sm text-slate-400">
                         <div>Location: Remote</div>
-                        <div>Open to: Contract / Advisory</div>
+                        
                     </div>
                 </div>
             </div>
@@ -188,16 +184,11 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
             <h2 class="section-heading mono text-xl">Skills</h2>
             <div class="mt-4 grid gap-3">
                 <div class="flex flex-wrap gap-2">
-                    <span class="ghost mono text-sm">Binary Exploitation</span>
-                    <span class="ghost mono text-sm">Recon Automation</span>
-                    <span class="ghost mono text-sm">Bug Bounty</span>
-                    <span class="ghost mono text-sm">Nuclei</span>
-                    <span class="ghost mono text-sm">Go</span>
-                    <span class="ghost mono text-sm">Python</span>
-                    <span class="ghost mono text-sm">Burp Suite</span>
+                    <span class="ghost mono text-sm">Automation</span>
+                    <span class="ghost mono text-sm">AWS</span>
+                    <span class="ghost mono text-sm">Docker</span>
+                    <span class="ghost mono text-sm">Python, Golang</span>
                 </div>
-                <div class="mt-2 text-slate-400 text-sm">Pro tip: keep this list short and update as you add new
-                    projects or talks.</div>
             </div>
         </section>
 
@@ -207,56 +198,60 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
             <div class="mt-4 grid-responsive">
                 <!-- Project card (duplicate for each project) -->
                 <article class="bg-[var(--panel)] border border-slate-800 rounded p-4">
-                    <img class="card-img mb-3" src="/assets/resonance-wave12.jpg" alt="Project Resonance snapshot"
+                    <img class="card-img mb-3" src="/assets/Agneyastra.jpg" alt="Agneyastra Logo"
                         loading="lazy">
-                    <h3 class="mono text-lg">Project Resonance — Open Port Chronicle (Wave 12)</h3>
-                    <p class="text-slate-400 mt-2 text-sm">Observability & insights about internet services on common
-                        ports.</p>
+                    <h3 class="mono text-lg">Agneyastra</h3>
+                    <p class="text-slate-400 mt-2 text-sm">Firebase Misconfiguration Detection Toolkit.</p>
                     <div class="mt-3 flex gap-2">
-                        <a href="/projects/resonance.html" class="ghost mono text-sm">Details</a>
-                        <a href="/assets/resonance-report.pdf" class="ghost mono text-sm">Report</a>
+
+                        <a href="https://github.com/JA3G3R/agneyastra" class="ghost mono text-sm">Github</a>
                     </div>
                 </article>
 
-                <article class="bg-[var(--panel)] border border-slate-800 rounded p-4">
-                    <img class="card-img mb-3" src="/assets/jigsaw.jpg" alt="July Jigsaw CTF screenshot" loading="lazy">
-                    <h3 class="mono text-lg">July Jigsaw — CTF</h3>
-                    <p class="text-slate-400 mt-2 text-sm">Full walkthrough and writeup.</p>
-                    <div class="mt-3 flex gap-2">
-                        <a href="/projects/jigsaw.html" class="ghost mono text-sm">Walkthrough</a>
-                    </div>
-                </article>
-
-                <!-- add more project cards here -->
+                <!-- Upcoming project go here -->
             </div>
         </section>
 
         <!-- Blogs -->
         <section id="blogs" class="mb-10">
             <h2 class="section-heading mono text-xl">Blogs & Writeups</h2>
-            <p class="text-slate-400 text-sm mt-2">Short summaries — full posts are in <code>/blog/</code> (static HTML
-                or markdown builds).</p>
+
+            <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                <a href="https://redhuntlabs.com/blog/open-port-chronicle-what-port-80-revealed-about-the-internet-project-resonance-wave-12" class="mono text-green-200">Open Port Chronicle</a>
+                <p class="text-slate-400 text-sm mt-2"> What Port 80 Revealed About The Internet | Project Resonance (Wave 12)</p>
+            </li>
+
+            <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                <a href="https://bugbase.ai/blog/Exploiting-post-Message-vulnerabilities-for-Fun-and-Profit" class="mono text-green-200">Exploiting post message vulnerabilities for Fun and Profit</a>
+                <p class="text-slate-400 text-sm mt-2"> Prevent, exploit and find post message vulnerabilities for cross origin communication</p>
+            </li>
+
 
             <ul class="mt-4 grid-responsive">
                 <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
-                    <a href="./blog/2025-09-01-intro-binary-exploitation.html" class="mono text-green-200">Introduction
+                    <a href="https://bugbase.ai/blog/introduction-to-binary-exploitation-exploiting-buffer-overflows" class="mono text-green-200">Introduction
                         to Binary Exploitation — Exploiting buffer overflows</a>
                     <p class="text-slate-400 text-sm mt-2">A practical walkthrough on stack overflows and crafting
                         exploits.</p>
                 </li>
 
                 <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
-                    <a href="./blog/2025-09-02-automating-bugbounties-nuclei.html"
+                    <a href="https://bugbase.ai/blog/automating-bug-bounties-with-nuclei"
                         class="mono text-green-200">Automating Bug Bounties with Nuclei</a>
                     <p class="text-slate-400 text-sm mt-2">Custom templates, fast scanning, and pipeline tips.</p>
                 </li>
 
                 <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
-                    <a href="./blog/2025-09-03-july-jigsaw-ctf.html" class="mono text-green-200">July Jigsaw — CTF
+                    <a href="https://bugbase.ai/blog/July-Jigsaw-Walkthrough" class="mono text-green-200">July Jigsaw — CTF
                         Walkthrough</a>
                     <p class="text-slate-400 text-sm mt-2">Challenge-by-challenge solutions and lessons learned.</p>
                 </li>
 
+                <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
+                    <a href="https://bugbase.ai/blog/July-Jigsaw-Walkthrough" class="mono text-green-200">Recon Series: Automation (Part-3)</a>
+                    <p class="text-slate-400 text-sm mt-2">Automating recon on Scale.</p>
+                </li>
+               
                 <!-- Template to add more blog cards -->
                 <!--
         <li class="bg-[var(--panel)] border border-slate-800 rounded p-4">
@@ -312,28 +307,22 @@ Binary exploitation · Recon automation · Bug bounty · Tooling
         </section>
 
         <!-- Conferences (images) -->
+
         <section id="conferences" class="mb-12">
             <h2 class="section-heading mono text-xl">Conferences & Photos</h2>
-            <p class="text-slate-400 text-sm mt-2">Snapshots from events. Images live in
-                <code>/assets/conferences/</code>.
-            </p>
 
             <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
                 <figure class="bg-[var(--panel)] rounded overflow-hidden border border-slate-800">
-                    <img src="/assets/conferences/conf-1.jpg" alt="Conference 1" class="card-img" loading="lazy">
-                    <figcaption class="p-2 text-xs text-slate-400">Conference — 2024</figcaption>
-                </figure>
-                <figure class="bg-[var(--panel)] rounded overflow-hidden border border-slate-800">
-                    <img src="/assets/conferences/conf-2.jpg" alt="Conference 2" class="card-img" loading="lazy">
-                    <figcaption class="p-2 text-xs text-slate-400">Meetup — 2023</figcaption>
+                    <img src="/assets/conferences/BlackHatEU1.jpg" alt="BlackHat EU 2024" class="card-img" loading="lazy">
+                    <figcaption class="p-2 text-xs text-slate-400">BlackHat EU — 2024</figcaption>
                 </figure>
                 <!-- add more images as available -->
             </div>
         </section>
 
         <footer class="mt-8 text-slate-500 text-sm mono">
-            © <span id="y"></span> Bhavarth Karmarkar — <a href="https://github.com/your-github-username"
-                class="underline">github</a> • <a href="https://linkedin.com/in/yourprofile"
+            Bhavarth Karmarkar — <a href="https://github.com/JA3G3R
+                class="underline">github</a> • <a href="https://linkedin.com/in/bhavarth"
                 class="underline">linkedin</a>
         </footer>
     </main>
